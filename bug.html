@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Incorrectly using innerHTML to add an element that already exists in the DOM
+    document.getElementById("myDiv").innerHTML = "<div id='myDiv'>This text replaces the original</div>"; 
+  </script>
+</body>
+</html>
