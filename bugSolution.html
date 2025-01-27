@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Correctly using DOM manipulation to replace the element
+    const oldDiv = document.getElementById("myDiv");
+    const newDiv = document.createElement("div");
+    newDiv.id = "myDiv";
+    newDiv.textContent = "This text replaces the original";
+    oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+  </script>
+</body>
+</html>
